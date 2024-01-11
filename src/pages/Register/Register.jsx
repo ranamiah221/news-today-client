@@ -6,7 +6,6 @@ const Register = () => {
  
     return (
         <div className="hero min-h-screen flex justify-between items-center px-16">
-        
         <div className="card shrink-0 w-1/2 max-w-sm shadow-2xl bg-base-100">
             <h2 className='text-2xl font-medium text-center mt-4'>Sign Up</h2> 
           <form className="card-body">
