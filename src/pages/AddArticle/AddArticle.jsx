@@ -1,76 +1,86 @@
+import { useForm } from "react-hook-form";
+
 const AddArticle = () => {
+  const { register, handleSubmit } = useForm();
+  const onSubmit = (data) => console.log(data);
   return (
-    <div className="hero min-h-screen bg-base-200">
-      <div className="card w-4/5 shrink-0 shadow-2xl bg-base-100">
-        <form className="card-body">
-          {/* title and image */}
-          <div className="w-full gap-5 flex justify-between ">
-            <div className="w-1/2 form-control">
-              <label className="label ">
-                <span className="label-text">Email</span>
+    <section>
+      <div>
+        <form onSubmit={handleSubmit(onSubmit)}>
+          {/* title or image */}
+          <div className="flex w-full gap-5 mb-5">
+            <div className="w-1/2">
+              <label className="form-control w-full">
+                <div className="label">
+                  <span className="label-text">Title</span>
+                </div>
+                <input
+                  {...register("title")}
+                  type="text"
+                  placeholder="Title"
+                  className="input input-bordered w-full "
+                />
               </label>
-              <input
-                type="email"
-                placeholder="email"
-                className="input input-bordered"
-                required
-              />
             </div>
-            <div className="w-1/2 form-control">
-              <label className="label">
-                <span className="label-text">Password</span>
+            <div className="w-1/2">
+              <label className="form-control w-full">
+                <div className="label">
+                  <span className="label-text">Image</span>
+                </div>
+                <input {...register('image')}
+                  type="file"
+                  className="file-input file-input-bordered file-input-accent w-full "
+                />
               </label>
-              <input
-                type="password"
-                placeholder="password"
-                className="input input-bordered"
-                required
-              />
-            </div>
-          </div>
-          {/* publisher and tags */}
-          <div className="w-full gap-5 flex justify-between ">
-            {/* publisher */}
-            <div className="w-1/2 form-control">
-              <label className="label ">
-                <span className="label-text">Publisher</span>
-              </label>
-              <input
-                type="email"
-                placeholder="email"
-                className="input input-bordered"
-                required
-              />
-            </div>
-            {/* tags */}
-            <div className="w-1/2 form-control">
-              <label className="label">
-                <span className="label-text">Password</span>
-              </label>
-              <input
-                type="password"
-                placeholder="password"
-                className="input input-bordered"
-                required
-              />
             </div>
           </div>
-          {/* description ---done*/}
+          {/* publisher or category */}
+          <div className="flex w-full gap-5 mb-5">
+            <div className="w-1/2">
+              <span className="label-text">Publisher</span>
+              <select
+                {...register("publisher")}
+                className="select select-bordered w-full "
+              >
+                <option disabled selected>
+                  You the Publisher
+                </option>
+                <option>Riyasad</option>
+                <option>Dev</option>
+                <option>Not Out Noman</option>
+                <option>Tonoy</option>
+              </select>
+            </div>
+            <div className="w-1/2">
+              <span className="label-text">Category</span>
+              <select
+                {...register("publisher")}
+                className="select select-bordered w-full "
+              >
+                <option disabled selected>
+                  You the Publisher
+                </option>
+                <option>Riyasad</option>
+                <option>Dev</option>
+                <option>Not Out Noman</option>
+                <option>Tonoy</option>
+              </select>
+              
+            </div>
+          </div>
+          {/* text description  */}
           <div className="w-full">
-              <label className="label ">
-                <span className="label-text">Description</span>
-              </label>
-              <textarea
-                placeholder="description"
-                name="description"
-                className="textarea textarea-bordered textarea-md w-full "
-              ></textarea>
-            
+            <span className="label-text">Description</span>
+            <textarea
+              {...register("description")}
+              className="textarea w-full textarea-bordered"
+              placeholder="description"
+            ></textarea>
           </div>
-          {/*special button */}
+          <button className="btn btn-primary w-full mt-5 mb-5">Add Article</button>
         </form>
       </div>
-    </div>
+    </section>
   );
 };
 
