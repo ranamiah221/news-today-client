@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 
 const Register = () => {
@@ -42,6 +43,12 @@ const navigate = useNavigate();
       })
     }
     return (
+       <>
+        <section>
+        <Helmet>
+                      <title>News Today | SignUp</title>
+        </Helmet>
+        </section>
         <div className="hero min-h-screen flex justify-between items-center px-16">
         <div className="card shrink-0 w-1/2 max-w-sm shadow-2xl bg-base-100">
             <h2 className='text-2xl font-medium text-center mt-4'>Sign Up</h2> 
@@ -116,6 +123,7 @@ const navigate = useNavigate();
             <img src={registerPic} alt="" />
         </div>
        </div>
+       </>
     );
 };
 

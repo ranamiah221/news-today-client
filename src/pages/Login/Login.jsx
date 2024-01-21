@@ -4,6 +4,7 @@ import loginPic from '../../assets/login.svg'
 import { useContext } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
 import Swal from 'sweetalert2';
+import { Helmet } from 'react-helmet-async';
 
 const Login = () => {
   const {signIn}=useContext(AuthContext);
@@ -44,6 +45,12 @@ const Login = () => {
 
   
   return (
+   <>
+   <section>
+        <Helmet>
+                      <title>News Today | SignIn</title>
+        </Helmet>
+        </section>
     <div className="hero min-h-screen flex justify-between items-center px-16">
         <div className="w-1/2">
             <img src={loginPic} alt="" />
@@ -90,6 +97,7 @@ const Login = () => {
         </div>
      
     </div>
+   </>
   );
 };
 
