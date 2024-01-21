@@ -7,6 +7,8 @@ import AddArticle from "../pages/AddArticle/AddArticle";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import Subscription from "../pages/Subscription/Subscription";
 import AllArticle from "../pages/AllArticle/AllArticle";
+import PrivateRoute from "./PrivateRoute";
+import Secret from "../pages/Home/Secret";
 
 
 const router= createBrowserRouter([
@@ -38,7 +40,12 @@ const router= createBrowserRouter([
         {
             path:'allArticle',
             element:<AllArticle></AllArticle>
-        }
+        },
+        {
+            path:'secret',
+            element:<PrivateRoute><Secret></Secret></PrivateRoute>
+        },
+
     ]
    }
 
