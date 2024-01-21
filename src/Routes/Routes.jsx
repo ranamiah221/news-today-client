@@ -5,6 +5,8 @@ import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import AddArticle from "../pages/AddArticle/AddArticle";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
+import Subscription from "../pages/Subscription/Subscription";
+import AllArticle from "../pages/AllArticle/AllArticle";
 
 
 const router= createBrowserRouter([
@@ -28,6 +30,14 @@ const router= createBrowserRouter([
         {
             path:'addArticle',
             element:<AddArticle></AddArticle>
+        },
+        {
+            path:'subscription',
+            element:<Subscription></Subscription>
+        },
+        {
+            path:'allArticle',
+            element:<AllArticle></AllArticle>
         }
     ]
    }
