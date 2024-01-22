@@ -7,7 +7,7 @@ import "swiper/css/navigation";
 
 const Banner = () => {
   const [articles] = useArticle([]);
-  console.log(articles);
+ 
   return (
     <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
       {articles.slice(0,6).map((article) => (

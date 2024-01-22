@@ -1,8 +1,13 @@
+import useArticle from "../../hook/useArticle";
+import Article from "./Article";
 
 const AllArticle = () => {
+    const [articles]=useArticle([]);
     return (
-        <div>
-           <h1 className="text-7xl font-bold text-center text-green-500">All Article Page </h1> 
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-5">
+            {
+                articles.map(article=><Article key={article._id}article={article}></Article>)
+            }
         </div>
     );
 };
