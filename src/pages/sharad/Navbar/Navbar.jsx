@@ -26,7 +26,8 @@ const Navbar = () => {
        <li><NavLink className='mr-4' to='/addArticle'>Add Article</NavLink></li>
        <li><NavLink className='mr-4' to='/allArticle'>All Article</NavLink></li>
        <li><NavLink className='mr-4' to='/subscription'>Subscription</NavLink></li>
-       <li><NavLink className='mr-4' to='/secret'>Secret</NavLink></li>
+       <li><NavLink className='mr-4' to='/myArticle'>My Article</NavLink></li>
+       <li><NavLink className='mr-4' to='/dashboard/allUser'>Dashboard</NavLink></li>
        {
         user?<>
         <button onClick={handleLogOut} className="btn btn-ghost">Log Out</button>
@@ -38,7 +39,7 @@ const Navbar = () => {
     </>
   return (
     <div className="navbar bg-base-100">
-      <div className="navbar-start">
+      <div className="navbar-start w-1/4">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <svg
@@ -69,7 +70,7 @@ const Navbar = () => {
          <h2 className="text-xl font-bold text-red-500">Barta 24</h2>
          </div>
       </div>
-      <div className="navbar-end hidden lg:flex">
+      <div className="navbar-end hidden w-3/4 lg:flex">
         <ul className="menu menu-horizontal px-1">
          {navLink}
 

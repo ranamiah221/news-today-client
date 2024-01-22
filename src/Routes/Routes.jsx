@@ -8,7 +8,11 @@ import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import Subscription from "../pages/Subscription/Subscription";
 import AllArticle from "../pages/AllArticle/AllArticle";
 import PrivateRoute from "./PrivateRoute";
-import Secret from "../pages/Home/Secret";
+import Secret from "../pages/Home/MyArticle";
+import Dashboard from "../layouts/Dashboard/Dashboard";
+import AllUser from "../pages/Dashboard/AllUser/AllUser";
+import AddPublisher from "../pages/Dashboard/AddPublisher/AddPublisher";
+import AllArticles from "../pages/Dashboard/AllArticles/AllArticles";
 
 
 const router= createBrowserRouter([
@@ -42,10 +46,28 @@ const router= createBrowserRouter([
             element:<AllArticle></AllArticle>
         },
         {
-            path:'secret',
+            path:'myArticle',
             element:<PrivateRoute><Secret></Secret></PrivateRoute>
         },
 
+    ]
+   },
+   {
+    path:'dashboard',
+    element:<Dashboard></Dashboard>,
+    children:[
+        {
+            path:'allUser',
+            element:<AllUser></AllUser>
+        },
+        {
+            path:'addPublisher',
+            element:<AddPublisher></AddPublisher>
+        },
+        {
+            path:'allArticle',
+            element:<AllArticles></AllArticles>
+        }
     ]
    }
 
