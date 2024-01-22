@@ -1,4 +1,5 @@
 
+import AllArticle from "../../AllArticle/AllArticle";
 import Banner from "../Banner/Banner";
 import { Helmet } from 'react-helmet-async';
 const Home = () => {
@@ -11,6 +12,7 @@ const Home = () => {
          </section>
          <div>
          <Banner></Banner>
+         <AllArticle></AllArticle>
          </div>
                
        </>

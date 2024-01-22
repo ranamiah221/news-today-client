@@ -1,9 +1,9 @@
 
-
 const Article = ({article}) => {
     const {title, image, publisher, category, description, views}=article;
-    return (
-        <div className="card card-compact w-full bg-base-100 shadow-xl mb-10">
+    return ( 
+      
+      <div className="card card-compact w-full bg-base-100 shadow-xl mb-10">
         <figure><img src={image} alt="Shoes" className="h-[300px]" /></figure>
         <div className="card-body text-justify">
           <h2 className="card-title">{title}</h2>
@@ -13,6 +13,7 @@ const Article = ({article}) => {
           <p>Views: {views}</p>
         </div>
       </div>
+        
     );
 };
 
