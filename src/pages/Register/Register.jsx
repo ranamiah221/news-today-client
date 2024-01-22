@@ -1,4 +1,4 @@
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import registerPic from '../../assets/login.svg' 
 import { useForm } from "react-hook-form";
 import { useContext } from "react";
@@ -46,7 +46,7 @@ const navigate = useNavigate();
        <>
         <section>
         <Helmet>
-                      <title>News Today | SignUp</title>
+            <title>News Today | SignUp</title>
         </Helmet>
         </section>
         <div className="hero min-h-screen flex justify-between items-center px-16">
