@@ -1,5 +1,4 @@
 
-
 const ScetionTitle = ({heading}) => {
     return (
         <div>
