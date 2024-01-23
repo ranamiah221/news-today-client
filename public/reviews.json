@@ -1,0 +1,32 @@
+[
+    {   
+        "id":1,
+        "name": "Mystery in Moonlight",
+        "details": "A thrilling tale of suspense and intrigue unfolds under the moonlight. Follow the twists and turns as Detective John Smith races against time to solve the baffling case.",
+        "rating": 3
+    },
+    {    
+        "id":2,
+        "name": "The Enchanted Garden",
+        "details": "Explore the magical world of The Enchanted Garden, where fantasy meets reality. Join our reporter on a whimsical journey through blooming flowers and talking animals.",
+        "rating": 4
+    },
+    {    
+        "id":3,
+        "name": "Tech Innovations Expo",
+        "details": "Discover the latest technological marvels at the Tech Innovations Expo. From cutting-edge gadgets to groundbreaking advancements, this expo is a must-visit for tech enthusiasts.",
+        "rating": 5
+    },
+    {    
+        "id":4,
+        "name": "Culinary Delights Festival",
+        "details": "Savor the flavors of the Culinary Delights Festival, where top chefs showcase their culinary masterpieces. Indulge in a gastronomic adventure that will tantalize your taste buds.",
+        "rating": 3
+    },
+    {   
+        "id":5,
+        "name": "Beyond the Stars",
+        "details": "Embark on a cosmic journey with 'Beyond the Stars.' This riveting documentary explores the mysteries of the universe, from black holes to distant galaxies, with stunning visuals and expert insights.",
+        "rating": 5
+    }   
+]
