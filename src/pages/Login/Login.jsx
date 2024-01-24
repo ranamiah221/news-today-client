@@ -18,6 +18,7 @@ const Login = () => {
   const form= event.target;
   const email= form.email.value;
   const password= form.password.value;
+ 
    signIn(email,password)
    .then(result=>{
     const user= result.user;
@@ -89,6 +90,7 @@ const Login = () => {
             <p className='text-base font-medium'> Sign In with or</p>
             <div>
                 {/* social login.... */}
+               
             </div>
             <p className='text-base font-medium'>New here ? Please <Link to='/register'><span className='text-blue-500'>Sign Up</span></Link></p>
             </div>
